@@ -1,0 +1,666 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #f8f9fa;
+}
+
+.mainContato {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tituloContato {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.textoContato {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191c1f;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoImagem {
+    width: 50px;
+}
+
+.navLinks {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.navLinks a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efeito das Cores nos Links */
+.navLinks a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #d00015;
+    transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+    width: 100%;
+}
+
+/* resposividade navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .logoImagem {
+        width: 40px;
+    }
+}
+
+
+
+.formularioContato {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grupoFormulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.grupoFormulario input,
+.grupoFormulario textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.textAreaMensagem {
+    resize: none;
+}
+
+
+.grupoFormulario input:focus,
+.grupoFormulario textarea:focus {
+    border-color: #d00015;
+    outline: none;
+}
+
+.btnEnviar {
+    background-color: #d00015;
+    color: white;
+    padding: 15px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btnEnviar:hover {
+    background-color: rgb(170, 0, 17)
+}
+
+
+/* home */
+
+#imgBanner {
+    width: 100%;
+}
+
+.promocoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+#imgPromocoes {
+    width: 80%;
+}
+
+.info-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#icon {
+    font-size: 1.2rem;
+}
+
+.divider {
+    width: 1px;
+    height: 20px;
+    background: #ccc;
+}
+
+#titulo-categoria {
+    padding: 3rem;
+}
+
+.containerProdutos {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.item-produtos {
+    height: 28rem;
+    width: 14rem;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem
+}
+
+.item-produtos img {
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.text1-produto {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.text2-produto {
+    font-size: 2rem;
+    color: #E2232C;
+}
+
+.text3-produto {
+    font-size: 0.8rem;
+}
+
+.estrelas i {
+    color: gold;
+    font-size: 1.2rem;
+    margin-right: 3px;
+}
+
+
+.comprar-produto {
+    height: 2.5rem;
+    width: 9.5rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: black;
+    color: #FFFFFF;
+    transition: 0.3s ease;
+}
+
+.comprar-produto:hover {
+    background-color: #DF3D38;
+    transform: scale(1.1);
+}
+
+/* Tabela */
+
+.espaco {
+    padding: 40px;
+}
+
+.container-tabela {
+    padding: 0 30px 0 30px;
+}
+
+.tabela-produtos {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.tabela-produtos th,
+.tabela-produtos td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.tabela-produtos td img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+.tabela-produtos th {
+    background-color: #f3f3f3;
+    font-weight: 600;
+}
+
+.btn-add-round {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #d00015;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-add-round:hover {
+    background-color: #E2232C;
+    transform: scale(1.1);
+}
+
+.btn-acao {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin: 0 4px;
+}
+
+.btn-acao.editar {
+    background-color: #000;
+}
+
+.btn-acao.excluir {
+    background-color: #eb2236;
+}
+
+.btn-acao:hover {
+    opacity: 0.9;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup:target {
+    display: flex;
+}
+
+.popup-conteudo {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.popup-conteudo h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.popup .fechar {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+    border: none;
+}
+
+.popup .fechar:hover {
+    color: #000;
+}
+
+.form-popup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-popup input {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.btn-salvar {
+    background-color: #000;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/*equipe*/
+
+main {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: #000000;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-card {
+    border-radius: 10px;
+    padding: 25px;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #4CAF50;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #ff0202;
+}
+
+.team-card h3 {
+    color: #000;
+}
+
+/* Ajustes Modo Escuro (Home) */
+
+#theme-toggle {
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+  }
+  
+  #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+
+  body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+
+  body.dark-mode .navbar {
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode .navLinks a {
+    color: #e0e0e0;
+  }
+  
+  body.dark-mode .navLinks a::after {
+    background-color: #ff4b5c;
+  }
+  
+ 
+  body.dark-mode .promocoes,
+  body.dark-mode .info-bar,
+  body.dark-mode .containerProdutos,
+  body.dark-mode main {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+
+  body.dark-mode #titulo-categoria {
+    color: #ffffff;
+  }
+  
+
+  body.dark-mode .container,
+  body.dark-mode .item-produtos,
+  body.dark-mode .popup-conteudo,
+  body.dark-mode .team-card {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    color: #f1f1f1;
+  }
+  
+
+  body.dark-mode .btnEnviar,
+  body.dark-mode .comprar-produto,
+  body.dark-mode .btn-add-round {
+    background-color: #ff4b5c;
+    color: #fff;
+  }
+  
+  body.dark-mode .btnEnviar:hover,
+  body.dark-mode .comprar-produto:hover,
+  body.dark-mode .btn-add-round:hover {
+    background-color: #ff6b6b;
+  }
+  
+
+  body.dark-mode .text2-produto {
+    color: #ff4b5c;
+  }
+  
+
+  body.dark-mode #imgBanner {
+    filter: brightness(0.7) contrast(1.2);
+  }
+  
+
+  body.dark-mode .info-item {
+    color: #ddd;
+  }
+  
+  body.dark-mode .divider {
+    background: #444;
+  }
+  
+
+  :focus-visible {
+    outline: 3px solid #d00015;
+    outline-offset: 2px;
+  }
+  
+  body.dark-mode :focus-visible {
+    outline-color: #ff4b5c;
+  }
+  
+
+/* Ajustes Modo Escuro (Tabela) */
+
+body.dark-mode .tabela-produtos {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    border-color: #333;
+  }
+  
+  body.dark-mode .tabela-produtos th {
+    background-color: #2a2a2a;
+    color: #fff;
+  }
+  
+  body.dark-mode .tabela-produtos td {
+    background-color: #1c1c1c;
+    color: #ddd;
+    border-color: #333;
+  }
+  
+
+  body.dark-mode .popup-conteudo {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark-mode .popup .fechar {
+    color: #fff;
+  }
+  
+
+  body.dark-mode h1 {
+    color: #fff;
+  }
+  
+  body.dark-mode .btn-add-round {
+    background-color: #ff4b5c;
+  }
+  
+  body.dark-mode .btn-add-round:hover {
+    background-color: #ff6b6b;
+  }
+  
+/* Ajuste Modo Escuro (equipe) */
+
+body.dark-mode main {
+    background-color: #121212;
+    color: #f1f1f1;
+  }
+  
+  body.dark-mode h1 {
+    color: #ffffff;
+  }
+  
+  body.dark-mode .team-card {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    border: 1px solid #2a2a2a;
+  }
+  
+  body.dark-mode .team-card h3 {
+    color: #ff4b5c;
+  }
+  
+  body.dark-mode .team-card p {
+    color: #ddd;
+  }
+
+  

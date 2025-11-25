@@ -1,0 +1,217 @@
+/* Container principal */
+.admin-container {
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+}
+
+/* Títulos */
+h1, h2 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Menu de abas */
+.admin-menu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.admin-menu button {
+  background: #e0e0e0;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.admin-menu button:hover {
+  background: #d5d5d5;
+}
+
+.admin-menu button.ativo {
+  background: #b83a3a;
+  gap: 2px;
+  color: white;
+}
+
+/* Botões principais */
+.buttons {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.btn-create {
+  background: #000;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-create:hover {
+  background: #000;
+}
+
+.btn-edit, .btn-delete {
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+  margin-right: 0.5rem;
+}
+
+.btn-edit {
+  background: #000;
+  color: white;
+}
+
+.btn-delete {
+  background: #f44336;
+  color: white;
+}
+
+.btn-delete:hover {
+  background: #d32f2f;
+}
+
+/* Tabelas modernizadas */
+.produtos-table {
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0 10px;
+}
+
+.produtos-table th, 
+.produtos-table td {
+  padding: 0.75rem;
+  text-align: left;
+  background: #fff;           /* Fundo branco para as células */
+  border: 10px solid #ffffff;     /* Borda suave */
+  border-radius: 5px;         /* Bordas arredondadas */
+}
+
+.produtos-table tr {
+  background: transparent;    /* O espaçamento é criado pelo border-spacing */
+}
+
+.produtos-table th {
+    padding: 12px;
+    background: #b83a3a;
+    gap: 20px;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.produtos-table tr {
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  border-radius: 5px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+  width: 100%;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+/* Cupons */
+.cupons-container {
+  padding: 1rem;
+  background: #f6f6f6;
+  border-radius: 8px;
+}
+
+/* Pedidos em cards */
+.pedidos-container {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pedido-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.pedido-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.pedido-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pedido-card li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pedido-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .admin-menu {
+    flex-direction: column;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .produtos-table th, .produtos-table td {
+    font-size: 0.9rem;
+  }
+  .btn-edit, .btn-delete, .btn-create {
+    width: 100%;
+    margin-right: 0;
+  }
+  .pedidos-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,94 @@
+footer {
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  text-align: center;
+  padding: 20px 10px; /* mais espaço interno */
+  width: 100%;
+}
+
+/* Conteúdo interno */
+.footer-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LOGO */
+footer .logo img {
+  width: 80px;
+  height: auto;
+}
+
+/* Informações e redes */
+footer .gerais {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 6px;
+}
+
+/* Redes sociais */
+footer .redes {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 4px;
+  margin-right: 30px;
+}
+
+footer .redes svg {
+  font-size: 1.3rem;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+footer .redes svg:hover {
+  transform: scale(1.15);
+}
+
+footer .redes svg:nth-of-type(1):hover {
+  color: #1877f2; /* Facebook */
+}
+
+footer .redes svg:nth-of-type(2):hover {
+  color: #e4405f; /* Instagram */
+}
+
+footer .redes svg:nth-of-type(3):hover {
+  color: #0077b5; /* LinkedIn */
+}
+
+/* Direitos autorais */
+footer .direitos {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #aaa;
+  border-top: 1px solid #222;
+  padding-top: 8px;
+  margin-right: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-infos {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  footer .gerais {
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .redes {
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  footer .direitos {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,138 @@
+/* Container principal */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #222;
+}
+
+/* Barra de navegação (supondo que tenha) */
+nav {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Links do menu */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Título */
+h1 {
+  margin: 30px 0 20px 0;
+  font-weight: 700;
+  font-size: 24px;
+  color: #222;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 400px;
+}
+
+.search {
+  display: flex;
+  gap: 10px;
+  width: 30vw;
+  height: 4vh;
+  border: #000 solid 1px;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+
+.search input {
+  width: 30vw;
+  height: 4vh;
+  padding-left: 10px;
+  border: none;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 280px;
+  background-color: #eee;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgb(0 0 0 / 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.card .nome {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.card .preco {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.card button {
+  background-color: #8d0000;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #aaa;
+}
+
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
