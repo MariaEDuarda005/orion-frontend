@@ -30,6 +30,7 @@ function Home() {
 
   return (
     <main className="mainHome">
+      <p>TESTE TESTE</p>
       <img src={BannerOrion} id="imgBanner" />
 
       <div className="promocoes">
