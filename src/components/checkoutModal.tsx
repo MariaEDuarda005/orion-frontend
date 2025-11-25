@@ -31,7 +31,6 @@ export default function CheckoutModal({ onClose, cart, discount, coupon, onClear
     try {
       setLoading(true);
 
-      // Criar pedido
       await api.post("/pedidos/finalizar", {
         cupomId: coupon.toLowerCase() === "desconto10" ? 1 : null,
         nome: nome, 
@@ -43,18 +42,15 @@ export default function CheckoutModal({ onClose, cart, discount, coupon, onClear
         })),
       });
 
-      // Gerar mensagem do WhatsApp
       let mensagem = `Olá ${nome}, seu pedido foi realizado:\n\n`;
       cart.forEach(item => {
         mensagem += `${item.quantidade}x ${item.produto?.nome} - R$ ${(item.precoUnitario * item.quantidade).toFixed(2)}\n`;
       });
       mensagem += `\nTotal: R$ ${total.toFixed(2)}`;
 
-      // Abrir WhatsApp
       const whatsappUrl = `https://wa.me/${telefone.replace(/\D/g, "")}?text=${encodeURIComponent(mensagem)}`;
       window.open(whatsappUrl, "_blank");
 
-      // Limpar carrinho e fechar modal
       onClearCart();
       onClose();
       alert("Pedido finalizado com sucesso!");

@@ -23,6 +23,7 @@
 
 .logo {
   font-size: 1.6rem;
+  margin-top: 1rem;
   font-weight: 700;
   color: #fff;
 }
@@ -36,13 +37,14 @@
 .nav a {
   color: #fff;
   text-decoration: none;
+  font-size: 16px;
   font-weight: 500;
-  padding-bottom: 3px;
   transition: 0.2s;
 }
 
 .nav a:hover {
-  color: #d4d4d4;
+  color: #b21212;
+  text-decoration: none;
 }
 
 .nav a.active {

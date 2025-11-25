@@ -4,7 +4,7 @@ import type { produtosData } from "../interface/produtosData";
 import "../css/admin.css";
 
 interface Props {
-  produto?: produtosData; // Se passado, é edição
+  produto?: produtosData;
   onClose: () => void;
   reload: () => void;
 }

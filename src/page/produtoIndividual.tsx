@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 import api from "../services/api";
 import imagemPadrao from "../assets/imagem.png";
 import type { produtosData } from "../interface/produtosData";
 import type { carrinhoItem } from "../interface/carrinho";
+
 import "../css/produtoIndividual.css";
 
 function ProdutoIndividual() {
@@ -121,22 +123,34 @@ function ProdutoIndividual() {
       {relacionados.length === 0 ? (
         <p>Nenhum produto relacionado encontrado nesta categoria.</p>
       ) : (
-        <div className="relacionados-grid">
+        <div className="product-grid">
           {relacionados.map((item) => (
-            <div className="item-produtos" key={item.id}>
-              <img src={item.imagem || imagemPadrao} alt={item.nome} />
-              <p className="text1-produto">{item.nome}</p>
-              <div className="estrelas">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-half"></i>
+            <div className="product-card" key={item.id}>
+              <div className="image-container">
+                <img 
+                  src={item.imagem || imagemPadrao} 
+                  alt={item.nome} 
+                />
               </div>
-              <p className="text2-produto">R$ {item.preco.toFixed(2)}</p>
-              <button className="comprar-produto" onClick={() => irParaProduto(item.id!)}>
-                Ver mais
-              </button>
+
+              <div className="card-content">
+                <h3 className="product-name">{item.nome}</h3>
+
+                <div className="stars">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar key={i} color="#FFD700" size={14} />
+                  ))}
+                </div>
+
+                <p className="product-price">R$ {item.preco.toFixed(2)}</p>
+
+                <button 
+                  className="btn-buy" 
+                  onClick={() => irParaProduto(item.id!)}
+                >
+                  Ver Detalhes
+                </button>
+              </div>
             </div>
           ))}
         </div>

@@ -5,19 +5,22 @@ import type { Cupom } from "../interface/cupom";
 interface CupomModalProps {
   onClose: () => void;
   reload: () => void;
-  cupom?: Cupom; // se existir, é edição
+  cupom?: Cupom;
 }
 
-export default function CupomModal({ onClose, reload, cupom }: CupomModalProps) {
+export default function CupomModal({
+  onClose,
+  reload,
+  cupom,
+}: CupomModalProps) {
   const [form, setForm] = useState<Cupom>({
     codigo: "",
     percentualDesconto: 0,
     ativo: true,
     validadeInicio: "",
-    validadeFinal: ""
+    validadeFinal: "",
   });
 
-  // Se houver cupom (edição), preencher o form
   useEffect(() => {
     if (cupom) {
       setForm({
@@ -25,7 +28,7 @@ export default function CupomModal({ onClose, reload, cupom }: CupomModalProps) 
         percentualDesconto: cupom.percentualDesconto,
         ativo: cupom.ativo,
         validadeInicio: cupom.validadeInicio,
-        validadeFinal: cupom.validadeFinal
+        validadeFinal: cupom.validadeFinal,
       });
     }
   }, [cupom]);
@@ -33,13 +36,14 @@ export default function CupomModal({ onClose, reload, cupom }: CupomModalProps) 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     try {
-      const payload = { ...form, percentualDesconto: Number(form.percentualDesconto) };
+      const payload = {
+        ...form,
+        percentualDesconto: Number(form.percentualDesconto),
+      };
 
       if (cupom) {
-        // Edição
         await api.put(`/cupons/atualizar/${cupom.idCupom}`, payload);
       } else {
-        // Criação
         await api.post("/cupons/criar", payload);
       }
 
@@ -52,9 +56,9 @@ export default function CupomModal({ onClose, reload, cupom }: CupomModalProps) 
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
     const { name, value, type, checked } = e.target;
-    setForm(prev => ({
+    setForm((prev) => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
   }
 
@@ -107,7 +111,9 @@ export default function CupomModal({ onClose, reload, cupom }: CupomModalProps) 
           </label>
 
           <div className="modal-actions">
-            <button type="button" onClick={onClose}>Cancelar</button>
+            <button type="button" onClick={onClose}>
+              Cancelar
+            </button>
             <button type="submit">{cupom ? "Salvar" : "Criar"}</button>
           </div>
         </form>

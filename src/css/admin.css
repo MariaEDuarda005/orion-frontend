@@ -1,17 +1,14 @@
-/* Container principal */
 .admin-container {
   padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f9f9f9;
 }
 
-/* Títulos */
 h1, h2 {
   margin-bottom: 1.5rem;
   color: #333;
 }
 
-/* Menu de abas */
 .admin-menu {
   display: flex;
   gap: 10px;
@@ -38,7 +35,6 @@ h1, h2 {
   color: white;
 }
 
-/* Botões principais */
 .buttons {
   display: flex;
   margin-bottom: 1rem;
@@ -82,7 +78,6 @@ h1, h2 {
   background: #d32f2f;
 }
 
-/* Tabelas modernizadas */
 .produtos-table {
   width: 100%;
   border-collapse: separate; 
@@ -93,13 +88,13 @@ h1, h2 {
 .produtos-table td {
   padding: 0.75rem;
   text-align: left;
-  background: #fff;           /* Fundo branco para as células */
-  border: 10px solid #ffffff;     /* Borda suave */
-  border-radius: 5px;         /* Bordas arredondadas */
+  background: #ffffff;
+  border: 10px solid #ffffff;
+  border-radius: 5px;
 }
 
 .produtos-table tr {
-  background: transparent;    /* O espaçamento é criado pelo border-spacing */
+  background: transparent;
 }
 
 .produtos-table th {
@@ -116,7 +111,6 @@ h1, h2 {
   border-radius: 5px;
 }
 
-/* Modal */
 .modal {
   position: fixed;
   top: 0;
@@ -154,14 +148,12 @@ h1, h2 {
   gap: 0.5rem;
 }
 
-/* Cupons */
 .cupons-container {
   padding: 1rem;
   background: #f6f6f6;
   border-radius: 8px;
 }
 
-/* Pedidos em cards */
 .pedidos-container {
   display: grid;
   gap: 1rem;
@@ -195,7 +187,6 @@ h1, h2 {
   border-bottom: none;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .admin-menu {
     flex-direction: column;

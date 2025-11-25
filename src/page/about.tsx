@@ -37,14 +37,28 @@ export default function Equipe() {
           </div>
 
           <div className="team-card">
-            <div className="team-img lipe-img"></div>
-            <h3>Luis Felipe Anobile</h3>
-            <p>Matrícula: 202302529984</p>
+            <div className="team-img yasmin-img"></div>
+            <h3>Yasmin Novais Vieira</h3>
+            <p>Matrícula: 202508386461</p>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/in/luis-felipe-anobile-3a85941bb/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/yasmin-novais-vieira" target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-linkedin"></i>
               </a>
-              <a href="https://github.com/LipeAnobile" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Yasminnovaisvieira" target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-github"></i>
+              </a>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <div className="team-img sara-img"></div>
+            <h3>Sara Giglio Trombaioli</h3>
+            <p>Matrícula: 202502515642</p>
+            <div className="social-icons">
+              <a href="https://www.linkedin.com/in/sara-giglio-trombaioli-b5011a293" target="_blank" rel="noopener noreferrer">
+                <i className="bi bi-linkedin"></i>
+              </a>
+              <a href="https://github.com/saratgiglio" target="_blank" rel="noopener noreferrer">
                 <i className="bi bi-github"></i>
               </a>
             </div>

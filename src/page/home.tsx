@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { FaStar } from "react-icons/fa";
 import api from "../services/api";
 import imagemPadrao from "../assets/imagem.png";
+import BannerOrion from "../assets/BannerOrion.svg";
 import type { produtosData } from "../interface/produtosData";
+
 import "../css/home.css";
-import BannerOrion from '../assets/BannerOrion.svg'
-import { useNavigate } from "react-router-dom";
-
-
 
 function Home() {
   const navigate = useNavigate();
@@ -30,11 +30,9 @@ function Home() {
 
   return (
     <main className="mainHome">
-      <p>TESTE TESTE</p>
-      <img src={BannerOrion} id="imgBanner" />
+      <img src={BannerOrion} id="imgBanner" alt="Banner Promocional" />
 
       <div className="promocoes">
-
         <div className="info-bar">
           <div className="info-item">
             <i className="bi bi-truck" id="icon"></i>
@@ -59,38 +57,40 @@ function Home() {
       </div>
 
       {loading ? (
-        <p style={{ textAlign: "center" }}>Carregando...</p>
+        <p style={{ textAlign: "center", padding: "2rem" }}>Carregando ofertas...</p>
       ) : (
         <div className="containerProdutos">
-          {produtos.slice(0, 4).map((produto) => (
-            <div className="item-produtos" key={produto.id}>
-              <img
-                src={produto.imagem ? produto.imagem : imagemPadrao}
-                alt={produto.nome}
-              />
+          <div className="product-grid">
+            {produtos.slice(0, 4).map((produto) => (
+              <div className="product-card" key={produto.id}>
+                <div className="image-container">
+                  <img
+                    src={produto.imagem ? produto.imagem : imagemPadrao}
+                    alt={produto.nome}
+                  />
+                </div>
 
-              <p className="text1-produto">{produto.nome}</p>
+                <div className="card-content">
+                  <h3 className="product-name">{produto.nome}</h3>
 
-              <div className="estrelas">
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
-                <i className="bi bi-star-fill"></i>
+                  <div className="stars">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} color="#FFD700" size={14} />
+                    ))}
+                  </div>
+
+                  <p className="product-price">R$ {produto.preco.toFixed(2)}</p>
+
+                  <button
+                    className="btn-buy"
+                    onClick={() => navigate(`/produto/${produto.id}`)}
+                  >
+                    Ver Detalhes
+                  </button>
+                </div>
               </div>
-
-              <p className="text2-produto">R$ {produto.preco.toFixed(2)}</p>
-
-
-              <button 
-                className="comprar-produto" 
-                onClick={() => navigate(`/produto/${produto.id}`)}
-              >
-                Ver mais
-              </button>
-
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       )}
     </main>

@@ -1,5 +1,3 @@
-
-
 .cart-container {
   max-width: 1100px;
   margin: 0 auto;
@@ -19,7 +17,7 @@
   background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .cart-item {
@@ -83,15 +81,13 @@
   opacity: 0.7;
 }
 
-
-
 .cart-summary {
   flex: 1;
   background: #fff;
   padding: 1.5rem;
   border-radius: 10px;
   height: fit-content;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
 .cart-summary h3 {
@@ -126,10 +122,6 @@
   opacity: 0.85;
 }
 
-
-/* Responsivo*/
-
-
 @media (max-width: 880px) {
   .cart-container {
     flex-direction: column;
@@ -160,11 +152,12 @@
 }
 
 .coupon-container {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .coupon-box {
-  margin: 1.5rem 0;  padding: 1rem;
+  margin: 1.5rem 0;
+  padding: 1rem;
   background: #fafafa;
   border: 1px solid #e5e5e5;
   border-radius: 8px;
@@ -202,25 +195,25 @@
 
 .coupon-btn {
   padding: 0.8rem 1.4rem;
-  background: #111; 
+  background: #111;
   color: #fff;
   border: none;
-  border-radius: 10px; 
+  border-radius: 10px;
   font-size: 0.95rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   margin-left: 10px;
 }
 
 .coupon-btn:hover {
   background: #000;
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .coupon-btn:active {
   transform: translateY(0px);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
