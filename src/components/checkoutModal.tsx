@@ -73,7 +73,7 @@ export default function CheckoutModal({ onClose, cart, discount, coupon, onClear
         <input type="text" placeholder="Telefone" value={telefone} onChange={e => setTelefone(e.target.value)} />
         <input type="text" placeholder="CPF" value={cpf} onChange={e => setCpf(e.target.value)} />
 
-        <button onClick={handleSubmit} disabled={loading}>
+        <button onClick={handleSubmit} disabled={loading} className="botao-finaliza">
           {loading ? "Finalizando..." : `Enviar pedido (R$ ${total.toFixed(2)})`}
         </button>
       </div>
