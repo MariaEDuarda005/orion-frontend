@@ -23,7 +23,7 @@ export default function Admin() {
 
   async function loadProdutos() {
     try {
-      const response = await api.get<produtosData[]>("/produtos");
+      const response = await api.get<produtosData[]>("/produtos/all-produtos");
       setProdutos(response.data);
     } catch (error) {
       console.error("Erro ao carregar produtos:", error);
