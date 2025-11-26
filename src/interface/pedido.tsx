@@ -31,7 +31,12 @@ export interface PedidoItemAdmin {
 
 export interface PedidoAdmin {
   idPedido: number;
-  clienteId: number;
+  clienteId: {
+    idCliente: number;
+    nomeCliente: string;
+    telefoneCliente: string;
+    cpf: string;
+  };
   cupomId: number | null;
   total: number;
   itens: PedidoItemAdmin[];

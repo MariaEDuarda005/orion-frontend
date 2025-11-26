@@ -207,7 +207,8 @@ export default function Admin() {
             <table className="produtos-table">
               <thead>
                 <tr>
-                  <th>Cliente ID</th>
+                  <th>Nome cliente</th>
+                  <th>Telefone cliente</th>
                   <th>Cupom</th>
                   <th>Itens</th>
                   <th>Total</th>
@@ -216,7 +217,8 @@ export default function Admin() {
               <tbody>
                 {pedidos.map((p) => (
                   <tr key={p.idPedido}>
-                    <td>{p.clienteId}</td>
+                    <td>{p.clienteId.nomeCliente}</td>
+                    <td>{p.clienteId.telefoneCliente}</td>
                     <td>{p.cupomId ?? "Nenhum"}</td>
                     <td>
                       <ul>
